@@ -3,8 +3,9 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {15,6,2,12,4};
-        SelectionSort.selectionSort(arr);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("Original Array: " + Arrays.toString(arr));
+        selectionSort(arr);
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
     }
 
     public static void selectionSort(int[] arr) {
@@ -28,4 +29,9 @@ public class SelectionSort {
         arr[j] = temp;
     }
 }
+
+/*
+Original Array: [15, 6, 2, 12, 4]
+Sorted Array: [2, 4, 6, 12, 15]
+ */
 
