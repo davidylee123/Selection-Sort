@@ -10,16 +10,17 @@ public class SelectionSort {
 
     public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-            int j = findMin(arr, i, arr.length-1);
+            int j = findMin(arr, i);
             swap(arr, i, j);
         }
     }
 
-    private static int findMin(int[] arr, int lower, int upper) {
+    private static int findMin(int[] arr, int lower) {
         int currIndexMin = lower;
-        for (int i = lower + 1; i <= upper; i++)
+        for (int i = lower + 1; i < arr.length; i++) {
             if (arr[i] < arr[currIndexMin])
                 currIndexMin = i;
+        }
         return currIndexMin;
     }
 
@@ -34,4 +35,3 @@ public class SelectionSort {
 Original Array: [15, 6, 2, 12, 4]
 Sorted Array: [2, 4, 6, 12, 15]
  */
-
